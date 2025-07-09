@@ -1,0 +1,17 @@
+export enum RoleEnum {
+  ADMIN = 1,
+  GER = 2,
+  JDA = 3,
+  SEG = 4,
+  SEC = 5,
+  ASE = 6,
+  RP = 7,
+  "AG-H" = 8,
+  "UF-H" = 9,
+  CMP = 10,
+  ACT = 11,
+  GG = 12,
+  GF = 13,
+  TES = 14,
+  JI = 15,
+}
