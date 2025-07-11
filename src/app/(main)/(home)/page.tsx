@@ -16,7 +16,6 @@ const Home = async () => {
       };
     }),
   );
-
   // Organizar fotos por carpeta
   const filesByFolder: FilesByFolderType = photosWithBase64.reduce(
     (acc: FilesByFolderType, photo) => {
