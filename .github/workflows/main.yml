@@ -39,7 +39,7 @@ jobs:
           NEXTCLOUD_SERVER=${{ vars.NEXTCLOUD_SERVER }}
           NEXTCLOUD_ENDPOINT=${{ vars.NEXTCLOUD_ENDPOINT }}
           NEXTCLOUD_USERNAME=${{ vars.NEXTCLOUD_USERNAME }}
-          NEXTCLOUD_TOKEN=${{ vars.NEXTCLOUD_TOKEN }}
+          NEXTCLOUD_TOKEN=${{ secrets.NEXTCLOUD_TOKEN }}
           NEXTCLOUD_FOLDER=${{ vars.NEXTCLOUD_FOLDER }}
           EOF
 
