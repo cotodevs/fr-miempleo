@@ -6,10 +6,11 @@ import { ConfigProvider } from "antd";
 import { theme } from "@/shared/theme";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import esES from "antd/locale/es_ES";
 export const metadata: Metadata = {
-  title: "fr-starter",
-  description: "Fr starter project",
+  title: "Mi empleo COTONEB",
+  description:
+    "Mi empleo COTONEB es una aplicación para estar al tanto de los empleos disponibles en COTONEB.",
 };
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={rubik.className}>
       <body>
-        <ConfigProvider theme={theme}>
+        <ConfigProvider theme={theme} locale={esES}>
           <AntdRegistry>{children}</AntdRegistry>
         </ConfigProvider>
         <ToastContainer

@@ -12,4 +12,5 @@ export const theme: ThemeConfig = {
     colorPrimary: "#2DAF52",
     colorSuccess: "#2DAF52",
   },
+
 };
