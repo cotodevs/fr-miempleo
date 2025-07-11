@@ -57,7 +57,7 @@ jobs:
             script: 'node_modules/next/dist/bin/next',
             autorestart: true,
             watch: false,
-            args: 'start',
+            args: 'start -p 4016',
             ignore_watch: ["node_modules", "public", "dist"],
           }
           EOF
