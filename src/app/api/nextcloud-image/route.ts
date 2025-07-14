@@ -25,7 +25,11 @@ export async function GET(request: NextRequest) {
     // Verificar caché del servidor
     const cached = serverCache.get(path);
     if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
+      //                      Body, Content-Type, Cache-Control
       return new NextResponse(cached.buffer, {
+        // public = Cualquier cache puede almacenar (CDN, navegador, proxy)
+        // max-age=1800 = Válido por 30 minutos
+        // stale-while-revalidate=3600 = Si expira, usar versión antigua mientras se actualiza (1 hora)
         headers: {
           "Content-Type": cached.contentType,
           "Cache-Control": "public, max-age=1800, stale-while-revalidate=3600",

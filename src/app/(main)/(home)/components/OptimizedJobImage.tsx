@@ -131,6 +131,7 @@ const OptimizedJobImage = ({
           src={imageSrc}
           alt={photo.name}
           className="rounded-lg object-contain"
+
         />
       )}
     </div>

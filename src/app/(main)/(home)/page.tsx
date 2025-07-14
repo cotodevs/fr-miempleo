@@ -1,7 +1,7 @@
 import { webDAVService } from "@/app/(main)/(home)/services/nextcloudService";
 import { TypingText } from "@/components/animate-ui/text/typing";
 import { MotionEffect } from "@/components/animate-ui/effects/motion-effect";
-import { ConfigProvider, Result } from "antd";
+import { ConfigProvider, Result, Image } from "antd";
 import { FilesByFolderType } from "@/shared/interfaces/nextcloud";
 import OptimizedJobImage from "./components/OptimizedJobImage";
 
@@ -115,11 +115,12 @@ const Home = async () => {
           </div>
         )}
 
-        <img
+        <Image
           src="/images/cotoneb.png"
           alt="Logo COTONEB"
           width={200}
           className="my-6"
+          preview={false}
         />
       </main>
     </section>
