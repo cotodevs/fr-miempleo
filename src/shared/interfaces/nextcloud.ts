@@ -7,20 +7,15 @@ export interface FileData {
 
 export interface DirectoryFilesType {
   name: string;
-  type: "directory";
-}
-
-export interface FoldersAndFilesType {
-  folders: DirectoryFilesType[];
-  files: FileData[];
+  type: string;
 }
 
 export type FilesByFolderType = {
-  [key:string]: Array<{
+  [key: string]: Array<{
     name: string;
     path: string;
     type: "file" | "directory";
     contentType?: string;
     base64?: string;
-  }>
-}
+  }>;
+};

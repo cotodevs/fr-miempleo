@@ -67,7 +67,6 @@ export class WebDAV {
       // Parseamos el texto XML a un documento XML, para poder manipularlo
       const xmlDoc = parser.parseFromString(text, "application/xml");
 
-      // Variable para almacenar los archivos
       const files: FileData[] = [];
 
       // Obtenemos todos los nodos de recursos
@@ -84,14 +83,13 @@ export class WebDAV {
           "d:getcontenttype",
         );
 
-
         const fileData: FileData = {
           name: displayName || "",
           path: href || "",
           type: this.getResourceType(currentItem),
           contentType: contentType || undefined,
         };
-        // Añadimos el archivo a la lista
+
         files.push(fileData);
       }
 
